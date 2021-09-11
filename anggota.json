@@ -1,0 +1,15 @@
+[
+    {
+        "no" : "No 1",
+        "nama" : "Nama : Enjang",
+        "jur" : " Jurusan : Teknik kendaraan ringan <br>"
+    },
+       {"no" : "No 2",
+       "nama" : "Nama : Indah",
+        "jur" : " Jurusan : Rekayasa perangkat lunak <br>"
+    }, 
+      { "no" : "No 3",
+        "nama" : "Nama : Elika",
+        "jur" : " Jurusan : Teknis bisnis sepeda motor"
+    }
+]
