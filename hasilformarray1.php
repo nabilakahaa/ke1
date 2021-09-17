@@ -1,36 +1,54 @@
 <?php
-if(isset($_POST['simpan'])){
-    $nama = $_POST['nama'];
-        $kelas = $_POST['kelas'];
-        $jurusan = $_POST['jurusan'];
+
+use latihan as GlobalLatihan;
+
+class latihan{
+
+
+        public function gaji($jabatan , $pendidikan){
+            echo "Jabatan : $jabatan<br>";
+            if ($jabatan == "direktur") {
+                $rektur = 10000000;
+            } else if ($jabatan == "manager") {
+                $rektur = 5000000;
+            } else if ($jabatan == "karyawan") {
+                $rektur = 3000000;
+            } {
+                echo "milih hela";
+            }
+
+            echo "gaji : $rektur<br>";
+            echo "Pendidikan : $pendidikan<br>";
+            if ($pendidikan == "s1") {
+                $tunjangan = 2000000;
+            } else if ($pendidikan == "sma") {
+                $tunjangan = 1000000;
+            } else if ($pendidikan == "smp") {
+                $tunjangan = 500000;
+            } else {
+                echo "kunn ai sia";
+            }
+            echo "Tunjangan : $tunjangan<br>";
+            $hasil = $rektur + $tunjangan;
+            echo "Total gaji : $hasil<br>";
+
+        }
+      public function pengeluaran($a , $b , $c) {
+            echo "Bayar Listrik : $a<br>";
+            echo "Bayar Kontrakan : $b <br>";
+            echo "Cicilan Kendaraan : $c<br>";
+            $hasil = $a + $b + $c;
+            echo "Total Pengeluaran :$hasil";
+        }
+
+       
     }
+
+         $data = new latihan();
+         $data->gaji("manager" ,"smp");
+         $data->pengeluaran(200000, 1000000 , 600000);
+
+
+
+
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <center>
-        <h2>Data Siwa Kelas XII RPL</h2>
-        <table border="1">
-            <tr>
-                <th>Nama</th>
-                <th>Kelas</th>
-                <th>Jurusan</th>
-                </tr>
-                <?php
-                for($i=0; $i<count($nama); $i++){
-                    ?>
-                    <tr>
-                    <td><?php echo $nama[$i]; ?></td>
-                    <td><?php echo $kelas[$i]; ?></td> 
-                    <td><?php echo $jurusan[$i]; } ?></td>
-                    </tr>
-                    </table>
-                    </center>
-</body>
-</html>
